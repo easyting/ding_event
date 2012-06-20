@@ -495,7 +495,6 @@ function ding_event_field_default_fields() {
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
-        'profile2_private' => FALSE,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -535,7 +534,6 @@ function ding_event_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
-        'default_image' => 0,
         'file_directory' => 'list_image/event',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -546,31 +544,12 @@ function ding_event_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'media',
+        'module' => 'image',
         'settings' => array(
-          'allowed_schemes' => array(
-            'public' => 'public',
-          ),
-          'allowed_types' => array(
-            'audio' => 0,
-            'default' => 0,
-            'image' => 'image',
-            'video' => 0,
-          ),
-          'browser_plugins' => array(
-            'dams_media_browser--media_browser_1' => 0,
-            'dams_media_browser--media_browser_2' => 'dams_media_browser--media_browser_2',
-            'dams_media_browser--media_browser_3' => 0,
-            'dams_media_browser--media_browser_4' => 0,
-            'dams_media_browser--media_browser_5' => 0,
-            'ding_content' => 0,
-            'library' => 0,
-            'media_default--media_browser_1' => 0,
-            'upload' => 'upload',
-          ),
+          'preview_image_style' => 'square_thumbnail',
           'progress_indicator' => 'throbber',
         ),
-        'type' => 'media_generic',
+        'type' => 'image_image',
         'weight' => '3',
       ),
     ),
@@ -600,7 +579,6 @@ function ding_event_field_default_fields() {
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
-        'profile2_private' => FALSE,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -640,7 +618,6 @@ function ding_event_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
-        'default_image' => 0,
         'file_directory' => 'main_image/event',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -651,31 +628,12 @@ function ding_event_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'media',
+        'module' => 'image',
         'settings' => array(
-          'allowed_schemes' => array(
-            'public' => 'public',
-          ),
-          'allowed_types' => array(
-            'audio' => 0,
-            'default' => 0,
-            'image' => 'image',
-            'video' => 0,
-          ),
-          'browser_plugins' => array(
-            'dams_media_browser--media_browser_1' => 0,
-            'dams_media_browser--media_browser_2' => 'dams_media_browser--media_browser_2',
-            'dams_media_browser--media_browser_3' => 0,
-            'dams_media_browser--media_browser_4' => 0,
-            'dams_media_browser--media_browser_5' => 0,
-            'ding_content' => 0,
-            'library' => 0,
-            'media_default--media_browser_1' => 0,
-            'upload' => 'upload',
-          ),
+          'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
-        'type' => 'media_generic',
+        'type' => 'image_image',
         'weight' => '2',
       ),
     ),
