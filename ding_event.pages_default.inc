@@ -538,12 +538,8 @@ events
       'override_title_text' => '',
     );
     $pane->cache = array(
-      'method' => 'rules',
-      'settings' => array(
-        'granularity' => 'context',
-        'language' => 1,
-        'cache_key' => 'panel_context:page-ding_events:page_ding_events_panel_context',
-      ),
+      'method' => '0',
+      'settings' => array(),
     );
     $pane->style = array(
       'settings' => NULL,
