@@ -115,7 +115,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '8',
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -184,7 +184,7 @@ function ding_event_field_default_fields() {
           'label' => 'inline',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '3',
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -269,7 +269,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '6',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -420,7 +420,7 @@ function ding_event_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '2',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -511,7 +511,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '7',
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -616,7 +616,7 @@ function ding_event_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '4',
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -702,7 +702,7 @@ function ding_event_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '5',
+          'weight' => '9',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -769,10 +769,9 @@ function ding_event_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'og',
           'settings' => array(),
-          'type' => 'og_list_default',
-          'weight' => '1',
+          'type' => 'hidden',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'hidden',
