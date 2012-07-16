@@ -35,14 +35,14 @@ function ding_event_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_ding_event';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['comment_ding_event'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_ding_event';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['comment_form_location_ding_event'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -91,7 +91,10 @@ function ding_event_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_ding_event';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
   $export['node_options_ding_event'] = $strongarm;
 
   $strongarm = new stdClass;

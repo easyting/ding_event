@@ -351,8 +351,6 @@ function ding_event_views_default_views() {
 
   /* Display: Library teaser list */
   $handler = $view->new_display('ctools_context', 'Library teaser list', 'ctools_context_library_teaser');
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'library-event-teaser';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
@@ -389,7 +387,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['field_list_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_list_image']['settings'] = array(
     'image_style' => 'ding_library_list',
-    'image_link' => 'content',
+    'image_link' => '',
   );
   $handler->display->display_options['fields']['field_list_image']['field_api_classes'] = 0;
   /* Field: Content: Category */
@@ -440,13 +438,44 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_date']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_event_date']['hide_alter_empty'] = 0;
   $handler->display->display_options['fields']['field_event_date']['settings'] = array(
-    'format_type' => 'short',
+    'format_type' => 'date_only',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_event_date']['field_api_classes'] = 0;
+  /* Field: Content: Date and time */
+  $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
+  $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date_1']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date_1']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_event_date_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date_1']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_event_date_1']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_event_date_1']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_event_date_1']['hide_alter_empty'] = 0;
+  $handler->display->display_options['fields']['field_event_date_1']['settings'] = array(
+    'format_type' => 'time_only',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  $handler->display->display_options['fields']['field_event_date_1']['field_api_classes'] = 0;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -495,7 +524,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['field_ding_body']['element_class'] = 'event-description';
   $handler->display->display_options['fields']['field_ding_body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ding_body']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_ding_body']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_ding_body']['hide_empty'] = 1;
   $handler->display->display_options['fields']['field_ding_body']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_ding_body']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_ding_body']['type'] = 'text_summary_or_trimmed';
