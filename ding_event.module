@@ -77,5 +77,22 @@ function theme_date_time_seperate_lines($vars) {
   return FALSE;
 }
 
-include_once('ding_event.features.inc');
+/**
+ * Implements hook_form_FORMID_alter to add extra validation to event edit form.
+ */
+function ding_event_form_ding_event_node_form_alter(&$form, &$form_state) {
+  $form['#validate'][] = 'ding_event_node_form_validate';
+}
 
+/**
+ * Additional validation of ding event edit form.
+ */
+function ding_event_node_form_validate($form, &$form_state) {
+  $lng = $form_state['values']['language'];
+  $fee = $form_state['values']['field_event_fee'][$lng][0]['value'];
+  if (!is_numeric($fee) || intval($fee) < 0) {
+    form_set_error('field_event_fee', t('Fee should be 0 or any positive number'));
+  }
+}
+
+include_once('ding_event.features.inc');
