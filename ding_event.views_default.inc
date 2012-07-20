@@ -886,6 +886,30 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['group_audience']['click_sort_column'] = 'gid';
   $handler->display->display_options['fields']['group_audience']['field_api_classes'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Field: Content: Fee */
+  $handler->display->display_options['fields']['field_event_fee']['id'] = 'field_event_fee';
+  $handler->display->display_options['fields']['field_event_fee']['table'] = 'field_data_field_event_fee';
+  $handler->display->display_options['fields']['field_event_fee']['field'] = 'field_event_fee';
+  $handler->display->display_options['fields']['field_event_fee']['label'] = '- ';
+  $handler->display->display_options['fields']['field_event_fee']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_event_fee']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_event_fee']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_event_fee']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_event_fee']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_event_fee']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_event_fee']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_event_fee']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_event_fee']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_event_fee']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_event_fee']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_event_fee']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_event_fee']['element_type'] = 'span';
+  $handler->display->display_options['fields']['field_event_fee']['element_label_colon'] = 0;
+  $handler->display->display_options['fields']['field_event_fee']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_event_fee']['empty'] = 'Gratis';
+  $handler->display->display_options['fields']['field_event_fee']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_event_fee']['empty_zero'] = 1;
+  $handler->display->display_options['fields']['field_event_fee']['hide_alter_empty'] = 0;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
