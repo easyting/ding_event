@@ -121,7 +121,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '8',
+          'weight' => '12',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -190,7 +190,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '6',
+          'weight' => '9',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -275,7 +275,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '7',
+          'weight' => '11',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -425,7 +425,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '5',
+          'weight' => '7',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -510,10 +510,11 @@ function ding_event_field_default_fields() {
           'weight' => '4',
         ),
         'teaser' => array(
-          'label' => 'above',
+          'label' => 'hidden',
+          'module' => 'text',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'type' => 'text_default',
+          'weight' => '3',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -670,7 +671,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -736,7 +737,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '4',
+          'weight' => '6',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
