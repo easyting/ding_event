@@ -28,8 +28,7 @@
   // We don't want to render the event date field if
   // it has no end date
   if ($id == 'field_event_date') {
-    if (empty($row->field_field_event_date[0]['raw']['value2'])
-          || $row->field_field_event_date[0]['raw']['value'] == $row->field_field_event_date[0]['raw']['value2']) {
+    if ($row->field_field_event_date[0]['raw']['value'] == $row->field_field_event_date[0]['raw']['value2']) {
       continue;
     }
   }
