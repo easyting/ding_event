@@ -35,7 +35,11 @@ function ding_event_field_formatter_info() {
 function ding_event_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
   $element = array();
   $formatter = $display['type'];
-  $vars = array('timezone' => NULL, 'dates' => NULL, 'attributes' => array(),);
+  $vars = array(
+    'timezone' => NULL,
+    'dates' => NULL,
+    'attributes' => array(),
+  );
 
   switch ($formatter) {
     case 'date_time_seperate_lines':
