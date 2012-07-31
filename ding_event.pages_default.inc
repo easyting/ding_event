@@ -117,18 +117,18 @@ function ding_event_default_page_manager_handlers() {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'type' => 'events',
-      'context' => array(
-        0 => 'relationship_entity_from_field:field_category-node-taxonomy_term_1',
-        1 => 'relationship_og_node_from_group_1',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    'type' => 'events',
+    'context' => array(
+      0 => 'relationship_entity_from_field:field_category-node-taxonomy_term_1',
+      1 => 'relationship_og_node_from_group_1',
+    ),
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
   $pane->cache = array();
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -143,28 +143,28 @@ function ding_event_default_page_manager_handlers() {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'links' => 1,
-      'no_extras' => 0,
-      'override_title' => 0,
-      'override_title_text' => '',
-      'identifier' => '',
-      'link' => 0,
-      'leave_node_title' => 1,
-      'build_mode' => 'full',
-      'context' => 'argument_entity_id:node_1',
-    );
+    'links' => 1,
+    'no_extras' => 0,
+    'override_title' => 0,
+    'override_title_text' => '',
+    'identifier' => '',
+    'link' => 0,
+    'leave_node_title' => 1,
+    'build_mode' => 'full',
+    'context' => 'argument_entity_id:node_1',
+  );
   $pane->cache = array(
-      'method' => 'rules',
-      'settings' => array(
-        'granularity' => 'context',
-        'language' => 1,
-        'cache_key' => 'panel_context:node_view:node_view_panel_context_2',
-      ),
-    );
+    'method' => 'rules',
+    'settings' => array(
+      'granularity' => 'context',
+      'language' => 1,
+      'cache_key' => 'panel_context:node_view:node_view_panel_context_2',
+    ),
+  );
   $pane->style = array(
-      'settings' => NULL,
-      'style' => 'naked',
-    );
+    'settings' => NULL,
+    'style' => 'naked',
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -179,27 +179,27 @@ function ding_event_default_page_manager_handlers() {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'ding_campaign_count' => 3,
-      'ding_campaign_offset' => 0,
-      'context' => array(
-        0 => 'argument_entity_id:node_1',
-        1 => 'relationship_og_node_from_group_1',
-        2 => 'empty',
-        3 => 'relationship_terms_from_node_1',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    'ding_campaign_count' => 3,
+    'ding_campaign_offset' => 0,
+    'context' => array(
+      0 => 'argument_entity_id:node_1',
+      1 => 'relationship_og_node_from_group_1',
+      2 => 'empty',
+      3 => 'relationship_terms_from_node_1',
+    ),
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
   $pane->cache = array(
-      'method' => 'simple',
-      'settings' => array(
-        'lifetime' => '600',
-        'granularity' => 'context',
-      ),
-    );
+    'method' => 'simple',
+    'settings' => array(
+      'lifetime' => '600',
+      'granularity' => 'context',
+    ),
+  );
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -214,13 +214,13 @@ function ding_event_default_page_manager_handlers() {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
   $pane->cache = array();
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 1;
@@ -340,18 +340,18 @@ events
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'type' => 'events',
-      'context' => array(
-        0 => 'argument_term_1',
-        1 => 'empty',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    'type' => 'events',
+    'context' => array(
+      0 => 'argument_term_1',
+      1 => 'empty',
+    ),
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
   $pane->cache = array();
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -366,13 +366,13 @@ events
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
   $pane->cache = array();
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 1;
@@ -387,13 +387,13 @@ events
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
   $pane->cache = array();
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -408,18 +408,18 @@ events
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'type' => 'events',
-      'context' => array(
-        0 => 'argument_term_1',
-        1 => 'empty',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    'type' => 'events',
+    'context' => array(
+      0 => 'argument_term_1',
+      1 => 'empty',
+    ),
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
   $pane->cache = array();
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 1;
@@ -434,24 +434,24 @@ events
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'context' => array(
-        0 => 'empty',
-        1 => 'argument_term_1',
-      ),
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
+    'context' => array(
+      0 => 'empty',
+      1 => 'argument_term_1',
+    ),
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
   $pane->cache = array(
-      'method' => 'rules',
-      'settings' => array(
-        'granularity' => 'context',
-        'language' => 1,
-        'cache_key' => 'panel_context:page-ding_events:page_ding_events_panel_context',
-      ),
-    );
+    'method' => 'rules',
+    'settings' => array(
+      'granularity' => 'context',
+      'language' => 1,
+      'cache_key' => 'panel_context:page-ding_events:page_ding_events_panel_context',
+    ),
+  );
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 2;
@@ -466,26 +466,26 @@ events
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'ding_campaign_count' => 3,
-      'ding_campaign_offset' => 0,
-      'context' => array(
-        0 => 'empty',
-        1 => 'empty',
-        2 => 'empty',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    'ding_campaign_count' => 3,
+    'ding_campaign_offset' => 0,
+    'context' => array(
+      0 => 'empty',
+      1 => 'empty',
+      2 => 'empty',
+    ),
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
   $pane->cache = array(
-      'method' => 'simple',
-      'settings' => array(
-        'lifetime' => '600',
-        'granularity' => 'none',
-      ),
-    );
+    'method' => 'simple',
+    'settings' => array(
+      'lifetime' => '600',
+      'granularity' => 'none',
+    ),
+  );
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -628,18 +628,18 @@ node/%node:nid/events
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'type' => 'events',
-      'context' => array(
-        0 => 'argument_term_1',
-        1 => 'argument_entity_id:node_1',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    'type' => 'events',
+    'context' => array(
+      0 => 'argument_term_1',
+      1 => 'argument_entity_id:node_1',
+    ),
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
   $pane->cache = array();
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -654,13 +654,13 @@ node/%node:nid/events
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
   $pane->cache = array();
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -675,18 +675,18 @@ node/%node:nid/events
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'type' => 'events',
-      'context' => array(
-        0 => 'argument_term_1',
-        1 => 'argument_entity_id:node_1',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    'type' => 'events',
+    'context' => array(
+      0 => 'argument_term_1',
+      1 => 'argument_entity_id:node_1',
+    ),
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
   $pane->cache = array();
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 1;
@@ -701,24 +701,24 @@ node/%node:nid/events
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'context' => array(
-        0 => 'argument_entity_id:node_1',
-        1 => 'argument_term_1',
-      ),
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
+    'context' => array(
+      0 => 'argument_entity_id:node_1',
+      1 => 'argument_term_1',
+    ),
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
   $pane->cache = array(
-      'method' => 'rules',
-      'settings' => array(
-        'granularity' => 'context',
-        'language' => 1,
-        'cache_key' => 'panel_context:page-ding_events_library:page_ding_events_library_panel_context',
-      ),
-    );
+    'method' => 'rules',
+    'settings' => array(
+      'granularity' => 'context',
+      'language' => 1,
+      'cache_key' => 'panel_context:page-ding_events_library:page_ding_events_library_panel_context',
+    ),
+  );
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 2;
@@ -733,27 +733,27 @@ node/%node:nid/events
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-      'ding_campaign_count' => 3,
-      'ding_campaign_offset' => 0,
-      'context' => array(
-        0 => 'empty',
-        1 => 'argument_entity_id:node_1',
-        2 => 'empty',
-        3 => 'empty',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    'ding_campaign_count' => 3,
+    'ding_campaign_offset' => 0,
+    'context' => array(
+      0 => 'empty',
+      1 => 'argument_entity_id:node_1',
+      2 => 'empty',
+      3 => 'empty',
+    ),
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
   $pane->cache = array(
-      'method' => 'simple',
-      'settings' => array(
-        'lifetime' => '1200',
-        'granularity' => 'args',
-      ),
-    );
+    'method' => 'simple',
+    'settings' => array(
+      'lifetime' => '1200',
+      'granularity' => 'args',
+    ),
+  );
   $pane->style = array(
-      'settings' => NULL,
-    );
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;

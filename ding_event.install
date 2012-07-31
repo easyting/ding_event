@@ -37,7 +37,7 @@ function date_field_update_add_end_date($field_name) {
     'cardinality',
     'deleted',
     'columns',
-    'bundles'
+    'bundles',
   );
 
   $to_column = $field_info['columns']['value'];
