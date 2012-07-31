@@ -32,7 +32,8 @@ projects[ding_content][download][tag] = "7.x-0.15"
 
 projects[features][type] = module
 projects[features][subdir] = contrib
-projects[features][version] = 1.0-beta4
+projects[features][version] = 1.0-rc3
+projects[features][patch][] = "http://drupal.org/files/ctool_custom_content-1079440-63.patch"
 
 ; Changed to download as git repository due to failing when applying
 ; patch when version of git is lower than 1.7.5.4 and option working-copy
@@ -55,4 +56,4 @@ projects[ting_reference][download][tag] = "7.x-0.18"
 
 projects[views][type] = module
 projects[views][subdir] = contrib
-projects[views][version] = 3.0
+projects[views][version] = 3.3
