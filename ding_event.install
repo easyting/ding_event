@@ -28,8 +28,18 @@ function date_field_update_add_end_date($field_name) {
   }
 
   // Remove non-db settings.
-  $non_db_settings = array('field_name', 'type',
-      'module', 'active', 'locked', 'cardinality', 'deleted', 'columns', 'bundles');
+  $non_db_settings = array(
+    'field_name',
+    'type',
+    'module',
+    'active',
+    'locked',
+    'cardinality',
+    'deleted',
+    'columns',
+    'bundles'
+  );
+
   $to_column = $field_info['columns']['value'];
   foreach ($non_db_settings as $setting) {
     unset($field_info[$setting]);
@@ -38,8 +48,11 @@ function date_field_update_add_end_date($field_name) {
 
   // Add end date setting
   $field_info['settings']['todate'] = 'optional';
-  $update_ok = db_update('field_config')->fields(array('data' => serialize($field_info)))
-    ->condition('field_name', $field_name)->execute();
+  $update_ok =
+    db_update('field_config')
+      ->fields(array('data' => serialize($field_info)))
+      ->condition('field_name', $field_name)
+      ->execute();
 
   // Alter field value storage tables (data and revisions)
   $field_data_table = 'field_data_' . $field_name;
