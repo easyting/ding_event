@@ -1,0 +1,61 @@
+<?php
+/**
+ * @file
+ * Update functions for the ding_event module.
+ */
+
+/**
+ * Implements hook_update_N().
+ * Add end date to the field.
+ */
+function ding_event_update_7001(&$sandbox) {
+  return date_field_update_add_end_date('field_event_date');
+}
+
+/**
+ * Helper function that allows to update a date field
+ * (without deleting existing content) to allow input of an end date.
+ * @param string $field_name
+ *   machine name of the field to be updated.
+ * @return string
+ *   Message that will be show when update is finished.
+ */
+function date_field_update_add_end_date($field_name) {
+  $field_info = field_info_field($field_name);
+
+  if (!$field_info) {
+    return t('Field "@fld" doesn\'t exists. Update aborted.', array('@fld' => $field_name));
+  }
+
+  // Remove non-db settings.
+  $non_db_settings = array('field_name', 'type',
+      'module', 'active', 'locked', 'cardinality', 'deleted', 'columns', 'bundles');
+  $to_column = $field_info['columns']['value'];
+  foreach ($non_db_settings as $setting) {
+    unset($field_info[$setting]);
+  }
+  unset($field_info['storage']['details']);
+
+  // Add end date setting
+  $field_info['settings']['todate'] = 'optional';
+  $update_ok = db_update('field_config')->fields(array('data' => serialize($field_info)))
+    ->condition('field_name', $field_name)->execute();
+
+  // Alter field value storage tables (data and revisions)
+  $field_data_table = 'field_data_' . $field_name;
+  $field_rev_table = 'field_revision_' . $field_name;
+  $field = $field_name . '_value2';
+  db_add_field($field_data_table, $field, $to_column);
+  db_add_field($field_rev_table, $field, $to_column);
+
+  if ($update_ok && db_field_exists($field_data_table, $field) && db_field_exists($field_rev_table, $field)) {
+    // Set default value for "to" date that equals "from".
+    db_update($field_data_table)->expression($field, $field_name . '_value')->execute();
+    db_update($field_rev_table)->expression($field, $field_name . '_value')->execute();
+    cache_clear_all();
+    return t('Field "@fld" updated successfully', array('@fld' => $field_name));
+  }
+  else {
+    return t('Update failed!');
+  }
+}
