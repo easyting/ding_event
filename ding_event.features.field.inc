@@ -10,7 +10,7 @@
 function ding_event_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'comment-comment_node_ding_event-comment_body'
+  // Exported field: 'comment-comment_node_ding_event-comment_body'.
   $fields['comment-comment_node_ding_event-comment_body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -33,6 +33,7 @@ function ding_event_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -72,7 +73,7 @@ function ding_event_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_event-ding_content_tags'
+  // Exported field: 'node-ding_event-ding_content_tags'.
   $fields['node-ding_event-ding_content_tags'] = array(
     'field_config' => array(
       'active' => '1',
@@ -93,6 +94,7 @@ function ding_event_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -150,7 +152,7 @@ function ding_event_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_event-field_address'
+  // Exported field: 'node-ding_event-field_address'.
   $fields['node-ding_event-field_address'] = array(
     'field_config' => array(
       'active' => '1',
@@ -160,6 +162,7 @@ function ding_event_field_default_fields() {
       'field_name' => 'field_address',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'addressfield',
       'settings' => array(),
       'translatable' => '0',
@@ -226,7 +229,7 @@ function ding_event_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_event-field_category'
+  // Exported field: 'node-ding_event-field_category'.
   $fields['node-ding_event-field_category'] = array(
     'field_config' => array(
       'active' => '1',
@@ -247,6 +250,7 @@ function ding_event_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -304,7 +308,7 @@ function ding_event_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_event-field_ding_body'
+  // Exported field: 'node-ding_event-field_ding_body'.
   $fields['node-ding_event-field_ding_body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -325,6 +329,7 @@ function ding_event_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -381,7 +386,7 @@ function ding_event_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_event-field_event_date'
+  // Exported field: 'node-ding_event-field_event_date'.
   $fields['node-ding_event-field_event_date'] = array(
     'field_config' => array(
       'active' => '1',
@@ -391,6 +396,7 @@ function ding_event_field_default_fields() {
       'field_name' => 'field_event_date',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'date',
       'settings' => array(
         'granularity' => array(
@@ -464,7 +470,7 @@ function ding_event_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_event-field_event_fee'
+  // Exported field: 'node-ding_event-field_event_fee'.
   $fields['node-ding_event-field_event_fee'] = array(
     'field_config' => array(
       'active' => '1',
@@ -485,6 +491,7 @@ function ding_event_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -510,7 +517,7 @@ function ding_event_field_default_fields() {
           'weight' => '4',
         ),
         'teaser' => array(
-          'label' => 'hidden',
+          'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
@@ -543,7 +550,7 @@ function ding_event_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_event-field_list_image'
+  // Exported field: 'node-ding_event-field_list_image'.
   $fields['node-ding_event-field_list_image'] = array(
     'field_config' => array(
       'active' => '1',
@@ -564,6 +571,7 @@ function ding_event_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -637,7 +645,7 @@ function ding_event_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_event-field_main_image'
+  // Exported field: 'node-ding_event-field_main_image'.
   $fields['node-ding_event-field_main_image'] = array(
     'field_config' => array(
       'active' => '1',
@@ -658,6 +666,7 @@ function ding_event_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -727,7 +736,7 @@ function ding_event_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_event-field_materials'
+  // Exported field: 'node-ding_event-field_materials'.
   $fields['node-ding_event-field_materials'] = array(
     'field_config' => array(
       'active' => '1',
@@ -737,6 +746,7 @@ function ding_event_field_default_fields() {
       'field_name' => 'field_materials',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'ting_reference',
       'settings' => array(),
       'translatable' => '0',
@@ -783,7 +793,7 @@ function ding_event_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_event-group_audience'
+  // Exported field: 'node-ding_event-group_audience'.
   $fields['node-ding_event-group_audience'] = array(
     'field_config' => array(
       'active' => '1',
@@ -804,6 +814,7 @@ function ding_event_field_default_fields() {
           0 => 'gid',
         ),
       ),
+      'locked' => '0',
       'module' => 'og',
       'no_ui' => TRUE,
       'settings' => array(),
