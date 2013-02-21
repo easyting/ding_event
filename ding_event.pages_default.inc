@@ -81,7 +81,7 @@ function ding_event_default_page_manager_pages() {
     'panels_breadcrumbs_state' => 1,
     'panels_breadcrumbs_titles' => 'Events
 %tid:name',
-    'panels_breadcrumbs_paths' => 'events
+    'panels_breadcrumbs_paths' => '<none>
 <none>',
     'panels_breadcrumbs_home' => 1,
   );
