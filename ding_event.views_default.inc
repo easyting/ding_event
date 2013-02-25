@@ -553,7 +553,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_fee']['label'] = '- ';
   $handler->display->display_options['fields']['field_event_fee']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_event_fee']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_fee']['empty'] = 'Gratis';
+  $handler->display->display_options['fields']['field_event_fee']['empty'] = 'Free';
   $handler->display->display_options['fields']['field_event_fee']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_event_fee']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -739,7 +739,7 @@ function ding_event_views_default_views() {
     t('View panes'),
     t('Short info'),
     t('- '),
-    t('Gratis'),
+    t('Free'),
     t('Short event info'),
     t('Left column data'),
     t('author'),
