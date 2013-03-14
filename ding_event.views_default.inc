@@ -638,12 +638,6 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
-  /* Field: Content: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['date_format'] = 'date_only';
-  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
   /* Field: Content: Address */
   $handler->display->display_options['fields']['field_address']['id'] = 'field_address';
   $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
@@ -757,7 +751,6 @@ function ding_event_views_default_views() {
     t('author'),
     t('Lasts till'),
     t('Author'),
-    t('Post date'),
     t('Adress'),
     t('Audience'),
     t('Category'),
