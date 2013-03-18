@@ -22,10 +22,7 @@ function ding_event_ctools_plugin_api() {
  * Implements hook_views_api().
  */
 function ding_event_views_api() {
-  return array(
-    'api' => 3,
-    'template path' => drupal_get_path('module', 'ding_event') . '/templates',
-  );
+  return array("version" => "3.0");
 }
 
 /**
