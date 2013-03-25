@@ -129,7 +129,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '12',
+          'weight' => '13',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -205,7 +205,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '9',
+          'weight' => '11',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -297,7 +297,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '11',
+          'weight' => '12',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -380,7 +380,7 @@ function ding_event_field_default_fields() {
             'trim_length' => '60',
           ),
           'type' => 'text_summary_or_trimmed',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -459,10 +459,17 @@ function ding_event_field_default_fields() {
           'weight' => 0,
         ),
         'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '7',
+          'label' => 'hidden',
+          'module' => 'date',
+          'settings' => array(
+            'format_type' => 'medium',
+            'fromto' => 'value',
+            'multiple_from' => '',
+            'multiple_number' => '',
+            'multiple_to' => '',
+          ),
+          'type' => 'date_default',
+          'weight' => '1',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -558,7 +565,7 @@ function ding_event_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '3',
+          'weight' => '2',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -640,7 +647,7 @@ function ding_event_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => 'content',
-            'image_style' => 'ding_vert_small',
+            'image_style' => 'square_thumbnail',
           ),
           'type' => 'image',
           'weight' => '0',
@@ -740,7 +747,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '4',
+          'weight' => '6',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -822,7 +829,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '6',
+          'weight' => '9',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -904,7 +911,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '4',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -980,10 +987,9 @@ function ding_event_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'hidden',
-          'module' => 'og',
           'settings' => array(),
-          'type' => 'og_list_default',
-          'weight' => '1',
+          'type' => 'hidden',
+          'weight' => '5',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
