@@ -130,7 +130,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '12',
+          'weight' => '13',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -299,7 +299,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '11',
+          'weight' => '12',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -909,7 +909,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '4',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -987,7 +987,6 @@ function ding_event_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'hidden',
-          'module' => 'og',
           'settings' => array(),
           'type' => 'og_list_default',
           'weight' => '2',
