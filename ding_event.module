@@ -58,7 +58,11 @@ function ding_event_field_formatter_view($entity_type, $entity, $field, $instanc
 function ding_event_theme() {
   return array(
     'date_time_seperate_lines' => array(
-      'variables' => array('variables' => array('timezone' => NULL, 'dates' => NULL, 'attributes' => NULL)),
+      'variables' => array('variables' => array(
+        'timezone' => NULL,
+        'dates' => NULL,
+        'attributes' => NULL,
+      )),
     ),
   );
 }
