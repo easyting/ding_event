@@ -647,7 +647,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['field_address']['id'] = 'field_address';
   $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address']['field'] = 'field_address';
-  $handler->display->display_options['fields']['field_address']['label'] = 'Adress';
+  $handler->display->display_options['fields']['field_address']['label'] = 'Address';
   $handler->display->display_options['fields']['field_address']['click_sort_column'] = 'country';
   $handler->display->display_options['fields']['field_address']['settings'] = array(
     'use_widget_handlers' => 1,
@@ -756,7 +756,7 @@ function ding_event_views_default_views() {
     t('author'),
     t('Lasts till'),
     t('Author'),
-    t('Adress'),
+    t('Address'),
     t('Audience'),
     t('Category'),
     t('Genre'),
