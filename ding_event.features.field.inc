@@ -464,7 +464,7 @@ function ding_event_field_default_fields() {
           'label' => 'inline',
           'module' => 'date',
           'settings' => array(
-            'format_type' => 'date_combined',
+            'format_type' => 'artesis_date_and_time',
             'fromto' => 'value',
             'multiple_from' => '',
             'multiple_number' => '',
