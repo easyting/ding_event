@@ -793,69 +793,6 @@ function ding_event_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_event-field_materials'.
-  $fields['node-ding_event-field_materials'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_materials',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'ting_reference',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'ting_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'ding_event',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '8',
-        ),
-        'full' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '12',
-        ),
-        'teaser_highlight' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_materials',
-      'label' => 'Materials',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'ting_reference',
-        'settings' => array(),
-        'type' => 'ting_reference_simple',
-        'weight' => '7',
-      ),
-    ),
-  );
-  
   // Exported field: 'node-ding_event-group_audience'.
   $fields['node-ding_event-group_audience'] = array(
     'field_config' => array(
