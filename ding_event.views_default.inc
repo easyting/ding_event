@@ -843,7 +843,6 @@ function ding_event_views_default_views() {
     t('Full list'),
     t('View panes'),
     t('Short info'),
-    t('- '),
     t('Free'),
     t('Short event info'),
     t('Left column data'),
