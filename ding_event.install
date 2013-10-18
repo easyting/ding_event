@@ -6,6 +6,7 @@
 
 /**
  * Implements hook_update_N().
+ *
  * Add end date to the field.
  */
 function ding_event_update_7001(&$sandbox) {
@@ -13,10 +14,14 @@ function ding_event_update_7001(&$sandbox) {
 }
 
 /**
- * Helper function that allows to update a date field
- * (without deleting existing content) to allow input of an end date.
+ * Helper function.
+ *
+ * Allows to update a date field (without deleting existing content) to allow
+ * input of an end date.
+ *
  * @param string $field_name
  *   machine name of the field to be updated.
+ *
  * @return string
  *   Message that will be show when update is finished.
  */
@@ -46,15 +51,14 @@ function date_field_update_add_end_date($field_name) {
   }
   unset($field_info['storage']['details']);
 
-  // Add end date setting
+  // Add end date setting.
   $field_info['settings']['todate'] = 'optional';
-  $update_ok =
-    db_update('field_config')
+  $update_ok = db_update('field_config')
       ->fields(array('data' => serialize($field_info)))
       ->condition('field_name', $field_name)
       ->execute();
 
-  // Alter field value storage tables (data and revisions)
+  // Alter field value storage tables (data and revisions).
   $field_data_table = 'field_data_' . $field_name;
   $field_rev_table = 'field_revision_' . $field_name;
   $field = $field_name . '_value2';
