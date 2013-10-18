@@ -462,15 +462,9 @@ function ding_event_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'inline',
-          'module' => 'date',
-          'settings' => array(
-            'format_type' => 'artesis_date_and_time',
-            'fromto' => 'value',
-            'multiple_from' => '',
-            'multiple_number' => '',
-            'multiple_to' => '',
-          ),
-          'type' => 'date_default',
+          'module' => 'ding_event',
+          'settings' => array(),
+          'type' => 'ding_event_date',
           'weight' => '3',
         ),
         'teaser_highlight' => array(
@@ -806,6 +800,12 @@ function ding_event_field_default_fields() {
       'locked' => '0',
       'module' => 'ting_reference',
       'settings' => array(),
+      'storage' => array(
+        'active' => '1',
+        'module' => 'virtual_field',
+        'settings' => array(),
+        'type' => 'virtual_field',
+      ),
       'translatable' => '0',
       'type' => 'ting_reference',
     ),
@@ -855,7 +855,7 @@ function ding_event_field_default_fields() {
       ),
     ),
   );
-  
+
   // Exported field: 'node-ding_event-group_audience'.
   $fields['node-ding_event-group_audience'] = array(
     'field_config' => array(
@@ -947,8 +947,6 @@ function ding_event_field_default_fields() {
   t('List image');
   t('Main image');
   t('Materials');
-  t('Place2book Tickets');
-  t('Placeholder for Place2book ticket information and/or order link');
   t('Tags');
 
   return $fields;
