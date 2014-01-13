@@ -23,8 +23,12 @@ function ding_event_field_formatter_info() {
     'date_time_seperate_lines' => array(
       'label' => t('Date and time on seperate lines'),
       'field types' => array('datetime'),
-      'settings' => array(
-      ),
+      'settings' => array(),
+    ),
+    'ding_event_date' => array(
+      'label' => t('Ding event date'),
+      'field types' => array('datetime'),
+      'settings' => array(),
     ),
   );
 }
@@ -48,6 +52,33 @@ function ding_event_field_formatter_view($entity_type, $entity, $field, $instanc
         $element[$delta] = array('#markup' => theme('date_time_seperate_lines', $vars));
       }
       break;
+
+    case 'ding_event_date':
+      foreach ($items as $delta => $item) {
+        $format = 'ding_event';
+        if (substr($item['value'], -8) == '23:00:00') {
+          $format = 'ding_event_all_day';
+        }
+
+        $date = new DateTime(
+          $item['value'],
+          new DateTimeZone($item['timezone_db'])
+        );
+        $ts = $date->getTimestamp();
+        $str = format_date($ts, $format, '', $item['timezone']);
+
+        if ($item['value'] != $item['value2']) {
+          $date = new DateTime(
+            $item['value2'],
+            new DateTimeZone($item['timezone_db'])
+          );
+          $ts = $date->getTimestamp();
+          $str .= ' - ' . format_date($ts, $format, '', $item['timezone']);
+        }
+
+        $element[$delta] = array('#markup' => $str);
+      }
+      break;
   }
   return $element;
 }
@@ -58,17 +89,20 @@ function ding_event_field_formatter_view($entity_type, $entity, $field, $instanc
 function ding_event_theme() {
   return array(
     'date_time_seperate_lines' => array(
-      'variables' => array('variables' => array(
-        'timezone' => NULL,
-        'dates' => NULL,
-        'attributes' => NULL,
-      )),
+      'variables' => array(
+        'variables' => array(
+          'timezone' => NULL,
+          'dates' => NULL,
+          'attributes' => NULL,
+        ),
+      ),
     ),
   );
 }
 
 /**
- * Theme function which shows to lines with date and time.
+ * Theme function which shows two lines with date and time.
+ *
  * Used on ding_events.
  */
 function theme_date_time_seperate_lines($vars) {
@@ -86,7 +120,9 @@ function theme_date_time_seperate_lines($vars) {
 }
 
 /**
- * Implements hook_form_FORMID_alter to add extra validation to event edit form.
+ * Implements hook_form_FORMID_alter().
+ *
+ * Adds extra validation to event edit form.
  */
 function ding_event_form_ding_event_node_form_alter(&$form, &$form_state) {
   $form['#validate'][] = 'ding_event_node_form_validate';
@@ -103,4 +139,4 @@ function ding_event_node_form_validate($form, &$form_state) {
   }
 }
 
-include_once('ding_event.features.inc');
+include_once 'ding_event.features.inc';

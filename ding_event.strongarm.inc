@@ -76,6 +76,20 @@ function ding_event_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_ding_event';
+  $strongarm->value = 'd/m-Y, H:i';
+  $export['date_format_ding_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_ding_event_all_day';
+  $strongarm->value = 'd/m-Y';
+  $export['date_format_ding_event_all_day'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__ding_event';
   $strongarm->value = array(
     'view_modes' => array(
@@ -103,7 +117,14 @@ function ding_event_strongarm() {
     ),
     'extra_fields' => array(
       'form' => array(),
-      'display' => array(),
+      'display' => array(
+        'webform' => array(
+          'teaser' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__ding_event'] = $strongarm;

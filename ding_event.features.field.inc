@@ -125,6 +125,12 @@ function ding_event_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'related_category_items' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '8',
+        ),
         'teaser' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
@@ -201,6 +207,12 @@ function ding_event_field_default_fields() {
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'related_category_items' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -294,6 +306,12 @@ function ding_event_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'related_category_items' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '10',
+        ),
         'teaser' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
@@ -374,6 +392,15 @@ function ding_event_field_default_fields() {
           'settings' => array(),
           'type' => 'text_default',
           'weight' => '0',
+        ),
+        'related_category_items' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(
+            'trim_length' => '100',
+          ),
+          'type' => 'text_summary_or_trimmed',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -459,6 +486,12 @@ function ding_event_field_default_fields() {
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'related_category_items' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '12',
         ),
         'teaser' => array(
           'label' => 'inline',
@@ -562,6 +595,12 @@ function ding_event_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'related_category_items' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '13',
+        ),
         'teaser' => array(
           'label' => 'inline',
           'settings' => array(),
@@ -642,6 +681,16 @@ function ding_event_field_default_fields() {
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'related_category_items' => array(
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => 'content',
+            'image_style' => 'ding_small',
+          ),
+          'type' => 'image',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -744,6 +793,12 @@ function ding_event_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'related_category_items' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '9',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -839,6 +894,12 @@ function ding_event_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'related_category_items' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '2',
+        ),
         'teaser' => array(
           'label' => 'hidden',
           'settings' => array(),
@@ -884,8 +945,6 @@ function ding_event_field_default_fields() {
   t('List image');
   t('Main image');
   t('Materials');
-  t('Place2book Tickets');
-  t('Placeholder for Place2book ticket information and/or order link');
   t('Tags');
 
   return $fields;
