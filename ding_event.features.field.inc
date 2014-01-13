@@ -944,7 +944,6 @@ function ding_event_field_default_fields() {
   t('Library');
   t('List image');
   t('Main image');
-  t('Materials');
   t('Tags');
 
   return $fields;
