@@ -136,7 +136,7 @@ function ding_event_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
+          'weight' => '5',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -504,7 +504,7 @@ function ding_event_field_default_fields() {
             'multiple_to' => '',
           ),
           'type' => 'date_default',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -605,7 +605,7 @@ function ding_event_field_default_fields() {
           'label' => 'inline',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '5',
+          'weight' => '8',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -803,7 +803,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '10',
+          'weight' => '11',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -947,7 +947,9 @@ function ding_event_field_default_fields() {
       'locked' => '0',
       'module' => 'og',
       'no_ui' => TRUE,
-      'settings' => array(),
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'group',
     ),
@@ -977,9 +979,10 @@ function ding_event_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'hidden',
+          'module' => 'og',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '8',
+          'type' => 'og_list_default',
+          'weight' => '3',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
