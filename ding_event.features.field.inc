@@ -218,7 +218,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '13',
+          'weight' => '11',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -605,7 +605,7 @@ function ding_event_field_default_fields() {
           'label' => 'inline',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '5',
+          'weight' => '7',
         ),
         'teaser_highlight' => array(
           'label' => 'above',
@@ -902,9 +902,10 @@ function ding_event_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'hidden',
+          'module' => 'ding_nodelist',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '8',
+          'type' => 'group_audience',
+          'weight' => '5',
         ),
         'teaser_highlight' => array(
           'label' => 'above',

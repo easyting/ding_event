@@ -116,7 +116,17 @@ function ding_event_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'title' => array(
+          'weight' => '-5',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
+      ),
       'display' => array(
         'webform' => array(
           'teaser' => array(
@@ -192,7 +202,7 @@ function ding_event_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_ding_event_pattern';
-  $strongarm->value = 'events/[node:title]';
+  $strongarm->value = 'hendelse/[node:title]';
   $export['pathauto_node_ding_event_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
