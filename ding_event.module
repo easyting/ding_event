@@ -139,4 +139,94 @@ function ding_event_node_form_validate($form, &$form_state) {
   }
 }
 
+/**
+ * Check if page type of ding event
+ */
+function _ding_event_check_page() {
+  $item = menu_get_item();
+  if (empty($item['map'][1]->type) && $item['map'][1]->type != 'ding_event') {
+    return FALSE;
+  }
+  return TRUE;
+}
+
+/**
+ * Implements hook_page_alter().
+ *
+ * Adds a microdata wrapper for event page.
+ */
+function ding_event_page_alter(&$page) {
+  if (_ding_event_check_page() === FALSE) {
+    return;
+  }
+
+  $prefix = '<div itemscope itemtype="http://data-vocabulary.org/Event">';
+  $prefix .= '<span itemprop="location" itemscope itemtype="http://data-vocabulary.org/​Organization">';
+  $prefix .= '<span itemprop="name">' . variable_get('site_name') . '</span></span>';
+
+  $page['content']['system_main']['#prefix'] = $prefix;
+  $page['content']['system_main']['#suffix'] = '</div>';
+}
+
+/**
+ * Implements template_preprocess_field().
+ */
+function ding_event_preprocess_field(&$variables, $hook) {
+  if (_ding_event_check_page() === FALSE) {
+    return;
+  }
+
+  $element = &$variables['element'];
+  if ($element['#field_name'] == 'field_main_image') {
+    $variables['items'][0]['#item']['attributes']['itemprop'] = 'photo';
+  }
+  if ($element['#field_name'] == 'field_ding_body') {
+    $variables['attributes_array']['itemprop'] = 'description';
+  }
+  if ($element['#field_name'] == 'field_event_date') {
+    $shown = &drupal_static('ding_event_dates');
+    if (empty($shown)) {
+      $shown = array('start' => FALSE, 'end' => FALSE);
+    }
+
+    // Set start date for first field_event_date.
+    if (!$shown['start']) {
+      $date = new DateTime(
+        $element['#items'][0]['value'],
+        new DateTimeZone($element['#items'][0]['timezone'])
+      );
+
+      $variables['items'][0]['#markup'] .=
+        '<meta itemprop="startDate"'
+        . ' datetime="' . $date->format(DateTime::ISO8601) . '"'
+        . ' content="' . $date->format('D, d M Y H:i') . '">';
+
+      $shown['start'] = TRUE;
+    }
+    // Set end date for second field_event_date.
+    elseif (!$shown['end']) {
+      $date = new DateTime(
+        $element['#items'][0]['value'],
+        new DateTimeZone($element['#items'][0]['timezone'])
+      );
+      $variables['items'][0]['#markup'] .=
+        '<meta itemprop="endDate"'
+        . ' datetime="' . $date->format(DateTime::ISO8601) . '"'
+        . ' content="' . $date->format('D, d M Y H:i') . '">';
+
+      $shown['end'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view_fields().
+ */
+function ding_event_preprocess_views_view_field(&$variables) {
+  if ($variables['field']->field === 'title' && _ding_event_check_page()) {
+    $output = '<span itemprop="summary">' . $variables['output'] . '</span>';
+    $variables['output'] = $output;
+  }
+}
+
 include_once 'ding_event.features.inc';
