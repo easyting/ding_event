@@ -550,7 +550,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_date']['label'] = '';
   $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date']['settings'] = array(
-    'format_type' => 'time_only',
+    'format_type' => 'ding_event_date_format',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',

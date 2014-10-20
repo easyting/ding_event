@@ -5,6 +5,38 @@
  */
 
 /**
+ * Implements hook_date_format_types().
+ */
+function ding_event_date_format_types() {
+  return array(
+    'ding_event_date_format' => t('Ding event date format'),
+  );
+}
+
+/**
+ * Implements hook_date_formats().
+ *
+ * Provides specific extra formats used by Ding! modules and assigning them
+ * to specific date types.
+ */
+function ding_event_date_formats() {
+  $formats = array();
+
+  $formats[] = array(
+    'type'    => 'ding_event_date_format',
+    'format'  => 'D, d/m/Y',
+    'locales' => array(),
+  );
+
+  // Save certain date formats into variables.
+  foreach ($formats as $format) {
+    variable_set('date_format_' . $format['type'], $format['format']);
+  }
+
+  return $formats;
+}
+
+/**
  * Implements hook_ding_library_menu_links().
  */
 function ding_event_ding_library_menu_links() {
