@@ -62,6 +62,11 @@ function ding_event_field_formatter_info() {
       'field types' => array('datetime'),
       'settings' => array(),
     ),
+    'ding_event_date' => array(
+      'label' => t('Ding event date'),
+      'field types' => array('datetime'),
+      'settings' => array(),
+    ),
   );
 }
 

@@ -83,8 +83,8 @@ function ding_event_field_group_info() {
     'label' => 'Relations',
     'weight' => '2',
     'children' => array(
-      0 => 'field_address',
-      1 => 'group_audience',
+      0 => 'group_audience',
+      1 => 'field_address',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -144,12 +144,12 @@ function ding_event_field_group_info() {
     'label' => 'Event',
     'weight' => '0',
     'children' => array(
-      0 => 'group_event_media',
-      1 => 'group_event_content',
-      2 => 'group_event_images',
-      3 => 'group_event_publish',
-      4 => 'group_event_relations',
-      5 => 'group_event_taxonomies',
+      0 => 'group_event_content',
+      1 => 'group_event_images',
+      2 => 'group_event_taxonomies',
+      3 => 'group_event_relations',
+      4 => 'group_event_publish',
+      5 => 'group_event_media',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
