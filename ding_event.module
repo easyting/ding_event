@@ -24,7 +24,7 @@ function ding_event_date_formats() {
 
   $formats[] = array(
     'type'    => 'ding_event_date_format',
-    'format'  => 'D, d/m/Y',
+    'format'  => 'D, d/m/Y H:i',
     'locales' => array(),
   );
 
