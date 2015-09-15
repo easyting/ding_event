@@ -26,6 +26,38 @@ function ding_event_views_api() {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function ding_event_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: event_main_image.
+  $styles['event_main_image'] = array(
+    'name' => 'event_main_image',
+    'label' => 'event_main_image',
+    'effects' => array(
+      2 => array(
+        'label' => 'Skalér og beskær',
+        'help' => 'Skalering og beskæring bevarer billedets højde-bredde-forhold og beskærer derefter den største dimension. Det er nyttigt til at generere kvadratiske thumbnails uden at forvrænge billedet.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '640',
+          'height' => '425',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function ding_event_node_info() {
