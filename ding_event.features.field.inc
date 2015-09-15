@@ -791,11 +791,12 @@ function ding_event_field_default_fields() {
         ),
         'full' => array(
           'label' => 'hidden',
-          'module' => 'file_entity',
+          'module' => 'image',
           'settings' => array(
-            'file_view_mode' => 'default',
+            'image_link' => '',
+            'image_style' => 'event_main_image',
           ),
-          'type' => 'file_rendered',
+          'type' => 'image',
           'weight' => '1',
         ),
         'related_category_items' => array(
