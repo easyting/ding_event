@@ -123,7 +123,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '12',
         ),
         'related_category_items' => array(
           'label' => 'above',
@@ -203,10 +203,16 @@ function ding_event_field_default_fields() {
           'weight' => '6',
         ),
         'full' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'label' => 'hidden',
+          'module' => 'addressfield',
+          'settings' => array(
+            'format_handlers' => array(
+              0 => 'address',
+            ),
+            'use_widget_handlers' => 1,
+          ),
+          'type' => 'addressfield_default',
+          'weight' => '2',
         ),
         'related_category_items' => array(
           'label' => 'above',
@@ -304,7 +310,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '11',
         ),
         'related_category_items' => array(
           'label' => 'above',
@@ -482,10 +488,11 @@ function ding_event_field_default_fields() {
           'weight' => '5',
         ),
         'full' => array(
-          'label' => 'above',
+          'label' => 'hidden',
+          'module' => 'ding_event',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'type' => 'ding_event_date',
+          'weight' => '4',
         ),
         'related_category_items' => array(
           'label' => 'above',
@@ -495,15 +502,9 @@ function ding_event_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'inline',
-          'module' => 'date',
-          'settings' => array(
-            'format_type' => 'artesis_date_and_time',
-            'fromto' => 'value',
-            'multiple_from' => '',
-            'multiple_number' => '',
-            'multiple_to' => '',
-          ),
-          'type' => 'date_default',
+          'module' => 'ding_event',
+          'settings' => array(),
+          'type' => 'date_time_seperate_lines',
           'weight' => '3',
         ),
         'teaser_highlight' => array(
@@ -590,10 +591,11 @@ function ding_event_field_default_fields() {
           'weight' => '4',
         ),
         'full' => array(
-          'label' => 'above',
+          'label' => 'hidden',
+          'module' => 'text',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'type' => 'text_default',
+          'weight' => '5',
         ),
         'related_category_items' => array(
           'label' => 'above',
@@ -680,7 +682,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '10',
         ),
         'related_category_items' => array(
           'label' => 'hidden',
@@ -788,10 +790,13 @@ function ding_event_field_default_fields() {
           'weight' => '9',
         ),
         'full' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'label' => 'hidden',
+          'module' => 'file_entity',
+          'settings' => array(
+            'file_view_mode' => 'default',
+          ),
+          'type' => 'file_rendered',
+          'weight' => '1',
         ),
         'related_category_items' => array(
           'label' => 'above',
@@ -892,7 +897,7 @@ function ding_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '6',
         ),
         'related_category_items' => array(
           'label' => 'above',
@@ -902,9 +907,9 @@ function ding_event_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'hidden',
-          'module' => 'ding_nodelist',
+          'module' => 'og',
           'settings' => array(),
-          'type' => 'group_audience',
+          'type' => 'og_list_default',
           'weight' => '5',
         ),
         'teaser_highlight' => array(

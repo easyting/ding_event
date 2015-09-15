@@ -44,7 +44,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'siste »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Topptekst: Global: Text area */
+  /* Overskrift: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -56,7 +56,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['group_audience']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['group_audience']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['group_audience']['click_sort_column'] = 'gid';
-  /* Felt: Innhold: Tittel */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -69,16 +69,16 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Felt: Innhold: Body */
+  /* Felt: Indhold: Body */
   $handler->display->display_options['fields']['field_ding_body']['id'] = 'field_ding_body';
   $handler->display->display_options['fields']['field_ding_body']['table'] = 'field_data_field_ding_body';
   $handler->display->display_options['fields']['field_ding_body']['field'] = 'field_ding_body';
   $handler->display->display_options['fields']['field_ding_body']['label'] = 'Brødtekst';
-  /* Felt: Innhold: List image */
+  /* Felt: Indhold: List image */
   $handler->display->display_options['fields']['field_list_image']['id'] = 'field_list_image';
   $handler->display->display_options['fields']['field_list_image']['table'] = 'field_data_field_list_image';
   $handler->display->display_options['fields']['field_list_image']['field'] = 'field_list_image';
-  /* Sort criterion: Innhold: Date and time -  start date (field_event_date) */
+  /* Sort criterion: Indhold: Date and time -  start date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -93,7 +93,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['arguments']['ding_library_nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['ding_library_nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['ding_library_nid']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Innhold: Has taxonomy term ID */
+  /* Contextual filter: Indhold: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
@@ -102,14 +102,14 @@ function ding_event_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Innhold: Publisert */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Innhold: Nyhetstype */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -125,7 +125,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
-  /* Filter criterion: Innhold: Språk */
+  /* Filter criterion: Indhold: Sprog */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -146,7 +146,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Innhold: Date and time */
+  /* Felt: Indhold: Date and time */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
@@ -173,7 +173,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['group_audience']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['group_audience']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['group_audience']['click_sort_column'] = 'gid';
-  /* Felt: Innhold: Tittel */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -186,7 +186,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Felt: Innhold: Date and time */
+  /* Felt: Indhold: Date and time */
   $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
   $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date_1']['field'] = 'field_event_date';
@@ -203,21 +203,21 @@ function ding_event_views_default_views() {
   );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Innhold: Publisert */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Innhold: Nyhetstype */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'ding_event' => 'ding_event',
   );
-  /* Filter criterion: Innhold: Vis på forsida */
+  /* Filter criterion: Indhold: Forfremmet til forside */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
@@ -231,7 +231,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
-  /* Filter criterion: Innhold: Språk */
+  /* Filter criterion: Indhold: Sprog */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -270,7 +270,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Innhold: List image */
+  /* Felt: Indhold: List image */
   $handler->display->display_options['fields']['field_list_image']['id'] = 'field_list_image';
   $handler->display->display_options['fields']['field_list_image']['table'] = 'field_data_field_list_image';
   $handler->display->display_options['fields']['field_list_image']['field'] = 'field_list_image';
@@ -283,7 +283,7 @@ function ding_event_views_default_views() {
     'image_style' => 'ding_library_list',
     'image_link' => '',
   );
-  /* Felt: Innhold: Category */
+  /* Felt: Indhold: Category */
   $handler->display->display_options['fields']['field_category']['id'] = 'field_category';
   $handler->display->display_options['fields']['field_category']['table'] = 'field_data_field_category';
   $handler->display->display_options['fields']['field_category']['field'] = 'field_category';
@@ -292,7 +292,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['field_category']['element_class'] = 'event-category';
   $handler->display->display_options['fields']['field_category']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_category']['hide_empty'] = TRUE;
-  /* Felt: Innhold: Date and time */
+  /* Felt: Indhold: Date and time */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
@@ -306,7 +306,7 @@ function ding_event_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Felt: Innhold: Date and time */
+  /* Felt: Indhold: Date and time */
   $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
   $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date_1']['field'] = 'field_event_date';
@@ -321,7 +321,7 @@ function ding_event_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
   );
-  /* Felt: Innhold: Tittel */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -334,7 +334,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Felt: Innhold: Body */
+  /* Felt: Indhold: Body */
   $handler->display->display_options['fields']['field_ding_body']['id'] = 'field_ding_body';
   $handler->display->display_options['fields']['field_ding_body']['table'] = 'field_data_field_ding_body';
   $handler->display->display_options['fields']['field_ding_body']['field'] = 'field_ding_body';
@@ -361,14 +361,14 @@ function ding_event_views_default_views() {
   $handler->display->display_options['arguments']['ding_library_nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Innhold: Publisert */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Innhold: Nyhetstype */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -385,7 +385,7 @@ function ding_event_views_default_views() {
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
     'field_data_field_event_date.field_event_date_value2' => 'field_data_field_event_date.field_event_date_value2',
   );
-  /* Filter criterion: Innhold: Språk */
+  /* Filter criterion: Indhold: Sprog */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -427,7 +427,7 @@ function ding_event_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Full list', 'panel_pane_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Innhold: List image */
+  /* Felt: Indhold: List image */
   $handler->display->display_options['fields']['field_list_image']['id'] = 'field_list_image';
   $handler->display->display_options['fields']['field_list_image']['table'] = 'field_data_field_list_image';
   $handler->display->display_options['fields']['field_list_image']['field'] = 'field_list_image';
@@ -449,7 +449,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['group_audience']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['group_audience']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['group_audience']['click_sort_column'] = 'gid';
-  /* Felt: Innhold: Date and time */
+  /* Felt: Indhold: Date and time */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
@@ -464,7 +464,7 @@ function ding_event_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
   );
-  /* Felt: Innhold: Tittel */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -477,7 +477,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Felt: Innhold: Body */
+  /* Felt: Indhold: Body */
   $handler->display->display_options['fields']['field_ding_body']['id'] = 'field_ding_body';
   $handler->display->display_options['fields']['field_ding_body']['table'] = 'field_data_field_ding_body';
   $handler->display->display_options['fields']['field_ding_body']['field'] = 'field_ding_body';
@@ -527,13 +527,13 @@ function ding_event_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Innhold: Category */
+  /* Felt: Indhold: Category */
   $handler->display->display_options['fields']['field_category']['id'] = 'field_category';
   $handler->display->display_options['fields']['field_category']['table'] = 'field_data_field_category';
   $handler->display->display_options['fields']['field_category']['field'] = 'field_category';
   $handler->display->display_options['fields']['field_category']['label'] = '';
   $handler->display->display_options['fields']['field_category']['element_label_colon'] = FALSE;
-  /* Felt: Innhold: Tittel */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -543,7 +543,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Felt: Innhold: Date and time */
+  /* Felt: Indhold: Date and time */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
@@ -563,7 +563,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['group_audience']['label'] = '';
   $handler->display->display_options['fields']['group_audience']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['group_audience']['click_sort_column'] = 'gid';
-  /* Felt: Innhold: Fee */
+  /* Felt: Indhold: Fee */
   $handler->display->display_options['fields']['field_event_fee']['id'] = 'field_event_fee';
   $handler->display->display_options['fields']['field_event_fee']['table'] = 'field_data_field_event_fee';
   $handler->display->display_options['fields']['field_event_fee']['field'] = 'field_event_fee';
@@ -574,7 +574,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_fee']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_event_fee']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Innhold: Nid */
+  /* Contextual filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -591,21 +591,21 @@ function ding_event_views_default_views() {
   );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Innhold: Publisert */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Innhold: Nyhetstype */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'ding_event' => 'ding_event',
   );
-  /* Filter criterion: Innhold: Språk */
+  /* Filter criterion: Indhold: Sprog */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -622,12 +622,12 @@ function ding_event_views_default_views() {
   $handler->display->display_options['css_class'] = 'left-column-data';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Innhold: Forfatter */
+  /* Relationship: Indhold: Forfatter */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Innhold: Date and time */
+  /* Felt: Indhold: Date and time */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
@@ -642,13 +642,13 @@ function ding_event_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Felt: Bruker: Navn */
+  /* Felt: Bruger: Navn */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['relationship'] = 'uid';
   $handler->display->display_options['fields']['name']['label'] = 'Forfatter';
-  /* Felt: Innhold: Author uid */
+  /* Felt: Indhold: Author uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'node';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
@@ -656,7 +656,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
-  /* Felt: Innhold: Address */
+  /* Felt: Indhold: Address */
   $handler->display->display_options['fields']['field_address']['id'] = 'field_address';
   $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address']['field'] = 'field_address';
@@ -667,32 +667,32 @@ function ding_event_views_default_views() {
       'address' => 'address',
     ),
   );
-  /* Felt: Innhold: Audience */
+  /* Felt: Indhold: Audience */
   $handler->display->display_options['fields']['field_audience']['id'] = 'field_audience';
   $handler->display->display_options['fields']['field_audience']['table'] = 'field_data_field_audience';
   $handler->display->display_options['fields']['field_audience']['field'] = 'field_audience';
   $handler->display->display_options['fields']['field_audience']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_audience']['delta_offset'] = '0';
-  /* Felt: Innhold: Category */
+  /* Felt: Indhold: Category */
   $handler->display->display_options['fields']['field_category']['id'] = 'field_category';
   $handler->display->display_options['fields']['field_category']['table'] = 'field_data_field_category';
   $handler->display->display_options['fields']['field_category']['field'] = 'field_category';
   $handler->display->display_options['fields']['field_category']['label'] = 'Kategori';
   $handler->display->display_options['fields']['field_category']['hide_empty'] = TRUE;
-  /* Felt: Innhold: Genre */
+  /* Felt: Indhold: Genre */
   $handler->display->display_options['fields']['field_genre']['id'] = 'field_genre';
   $handler->display->display_options['fields']['field_genre']['table'] = 'field_data_field_genre';
   $handler->display->display_options['fields']['field_genre']['field'] = 'field_genre';
   $handler->display->display_options['fields']['field_genre']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_genre']['delta_offset'] = '0';
-  /* Felt: Innhold: Material type */
+  /* Felt: Indhold: Material type */
   $handler->display->display_options['fields']['field_material_type']['id'] = 'field_material_type';
   $handler->display->display_options['fields']['field_material_type']['table'] = 'field_data_field_material_type';
   $handler->display->display_options['fields']['field_material_type']['field'] = 'field_material_type';
   $handler->display->display_options['fields']['field_material_type']['label'] = 'Medietype';
   $handler->display->display_options['fields']['field_material_type']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_material_type']['delta_offset'] = '0';
-  /* Felt: Innhold: Tags */
+  /* Felt: Indhold: Tags */
   $handler->display->display_options['fields']['ding_content_tags']['id'] = 'ding_content_tags';
   $handler->display->display_options['fields']['ding_content_tags']['table'] = 'field_data_ding_content_tags';
   $handler->display->display_options['fields']['ding_content_tags']['field'] = 'ding_content_tags';
@@ -700,7 +700,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['ding_content_tags']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['ding_content_tags']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Innhold: Nid */
+  /* Contextual filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -717,21 +717,21 @@ function ding_event_views_default_views() {
   );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Innhold: Publisert */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Innhold: Nyhetstype */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'ding_event' => 'ding_event',
   );
-  /* Filter criterion: Innhold: Språk */
+  /* Filter criterion: Indhold: Sprog */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -751,13 +751,13 @@ function ding_event_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Innhold: Category */
+  /* Felt: Indhold: Category */
   $handler->display->display_options['fields']['field_category']['id'] = 'field_category';
   $handler->display->display_options['fields']['field_category']['table'] = 'field_data_field_category';
   $handler->display->display_options['fields']['field_category']['field'] = 'field_category';
   $handler->display->display_options['fields']['field_category']['label'] = '';
   $handler->display->display_options['fields']['field_category']['element_label_colon'] = FALSE;
-  /* Felt: Innhold: Tittel */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -767,7 +767,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Felt: Innhold: Date and time */
+  /* Felt: Indhold: Date and time */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
@@ -780,7 +780,7 @@ function ding_event_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Felt: Innhold: Fee */
+  /* Felt: Indhold: Fee */
   $handler->display->display_options['fields']['field_event_fee']['id'] = 'field_event_fee';
   $handler->display->display_options['fields']['field_event_fee']['table'] = 'field_data_field_event_fee';
   $handler->display->display_options['fields']['field_event_fee']['field'] = 'field_event_fee';
@@ -791,7 +791,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_fee']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_event_fee']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Innhold: Nid */
+  /* Contextual filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -808,21 +808,21 @@ function ding_event_views_default_views() {
   );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Innhold: Publisert */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Innhold: Nyhetstype */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'ding_event' => 'ding_event',
   );
-  /* Filter criterion: Innhold: Språk */
+  /* Filter criterion: Indhold: Sprog */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
