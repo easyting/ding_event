@@ -93,14 +93,15 @@ function ding_event_field_formatter_view($entity_type, $entity, $field, $instanc
     case 'ding_event_date':
       foreach ($items as $delta => $item) {
         $format = 'ding_event';
-        if (substr($item['value'], -8) == '23:00:00') {
+        $date = new DateTime(
+          $item['value'],
+          new DateTimeZone($item['timezone'])
+        );
+        $hour = 24 - $date->getOffset() / 3600;
+        if (substr($item['value'], -8) ==  $hour . ':00:00') {
           $format = 'ding_event_all_day';
         }
 
-        $date = new DateTime(
-          $item['value'],
-          new DateTimeZone($item['timezone_db'])
-        );
         $ts = $date->getTimestamp();
         $str = format_date($ts, $format, '', $item['timezone']);
 
